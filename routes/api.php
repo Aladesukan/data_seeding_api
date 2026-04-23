@@ -13,6 +13,6 @@ Route::get('/profiles',[ProfileController::class,'index']);
 Route::get('/profiles/search', [ProfileController::class, 'search']);
 
 Route::get('/migrate', function () {
-    \Artisan::call('migrate', ['--force' => true]);
+    Artisan::call('migrate', ['--force' => true]);
     return 'Migration done';
 });
